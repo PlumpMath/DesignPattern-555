@@ -8,6 +8,7 @@ public class Soy extends DecoratorCondiment {
 
 	public Soy(Beverage beverage) {
 		this.beverage = beverage;
+		this.setSize(Beverage.CupSize.TALL);
 	}
 
 	@Override
@@ -17,6 +18,16 @@ public class Soy extends DecoratorCondiment {
 
 	@Override
 	public double cost() {
-		return .80 + beverage.cost();
+		double cost = beverage.cost();
+
+		if (getSize() == Beverage.CupSize.TALL) {
+			cost += 0.80;
+		} else if (getSize() == Beverage.CupSize.GRANDE) {
+			cost += .95;
+		} else if (getSize() == Beverage.CupSize.GRANDE) {
+			cost += 1.20;
+		}
+
+		return cost;
 	}
 }

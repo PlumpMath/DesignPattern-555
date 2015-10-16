@@ -8,6 +8,7 @@ public class Milk extends DecoratorCondiment {
 
 	public Milk(Beverage beverage) {
 		this.beverage = beverage;
+		this.setSize(Beverage.CupSize.TALL);
 	}
 
 	@Override
@@ -17,6 +18,16 @@ public class Milk extends DecoratorCondiment {
 
 	@Override
 	public double cost() {
-		return .80 + beverage.cost();
+		double cost = beverage.cost();
+
+		if (getSize() == Beverage.CupSize.TALL) {
+			cost += 0.10;
+		} else if (getSize() == Beverage.CupSize.GRANDE) {
+			cost += .35;
+		} else if (getSize() == Beverage.CupSize.GRANDE) {
+			cost += .80;
+		}
+
+		return cost;
 	}
 }

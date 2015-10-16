@@ -8,6 +8,7 @@ public class Whip extends DecoratorCondiment {
 
 	public Whip(Beverage beverage) {
 		this.beverage = beverage;
+		this.setSize(Beverage.CupSize.TALL);
 	}
 
 	@Override
@@ -17,6 +18,16 @@ public class Whip extends DecoratorCondiment {
 
 	@Override
 	public double cost() {
-		return .20 + beverage.cost();
+		double cost = beverage.cost();
+
+		if (getSize() == Beverage.CupSize.TALL) {
+			cost += 1.30;
+		} else if (getSize() == Beverage.CupSize.GRANDE) {
+			cost += 2.15;
+		} else if (getSize() == Beverage.CupSize.GRANDE) {
+			cost += 3.20;
+		}
+
+		return cost;
 	}
 }
