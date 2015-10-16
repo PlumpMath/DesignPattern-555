@@ -3,20 +3,20 @@ package Decorator;
 /**
  * ×ÛºÏ¿§·È
  */
-public class Mocha extends DecoratorCondiment {
+public class Soy extends DecoratorCondiment {
 	Beverage beverage;
 
-	public Mocha(Beverage beverage) {
+	public Soy(Beverage beverage) {
 		this.beverage = beverage;
 	}
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", Mocha";
+		return beverage.getDescription() + ", Soy";
 	}
 
 	@Override
 	public double cost() {
-		return .20 + beverage.cost();
+		return .80 + beverage.cost();
 	}
 }

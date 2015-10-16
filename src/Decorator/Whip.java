@@ -3,16 +3,16 @@ package Decorator;
 /**
  * ×ÛºÏ¿§·È
  */
-public class Mocha extends DecoratorCondiment {
+public class Whip extends DecoratorCondiment {
 	Beverage beverage;
 
-	public Mocha(Beverage beverage) {
+	public Whip(Beverage beverage) {
 		this.beverage = beverage;
 	}
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", Mocha";
+		return beverage.getDescription() + ", Whip";
 	}
 
 	@Override
