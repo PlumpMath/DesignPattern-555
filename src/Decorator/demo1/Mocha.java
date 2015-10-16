@@ -1,31 +1,32 @@
-package Decorator;
+package Decorator.demo1;
 
 /**
  * ×ÛºÏ¿§·È
  */
-public class Soy extends DecoratorCondiment {
+public class Mocha extends DecoratorCondiment {
 	Beverage beverage;
 
-	public Soy(Beverage beverage) {
+	public Mocha(Beverage beverage) {
 		this.beverage = beverage;
 		this.setSize(Beverage.CupSize.TALL);
 	}
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", Soy";
+		return beverage.getDescription() + ", Mocha";
 	}
 
 	@Override
 	public double cost() {
+
 		double cost = beverage.cost();
 
 		if (getSize() == Beverage.CupSize.TALL) {
-			cost += 0.80;
+			cost += 0.10;
 		} else if (getSize() == Beverage.CupSize.GRANDE) {
-			cost += .95;
+			cost += .15;
 		} else if (getSize() == Beverage.CupSize.GRANDE) {
-			cost += 1.20;
+			cost += .20;
 		}
 
 		return cost;

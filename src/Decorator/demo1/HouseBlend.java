@@ -1,4 +1,4 @@
-package Decorator;
+package Decorator.demo1;
 
 /**
  * ×ÛºÏ¿§·È

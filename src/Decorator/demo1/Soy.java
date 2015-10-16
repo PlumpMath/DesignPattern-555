@@ -1,19 +1,19 @@
-package Decorator;
+package Decorator.demo1;
 
 /**
  * ×ÛºÏ¿§·È
  */
-public class Whip extends DecoratorCondiment {
+public class Soy extends DecoratorCondiment {
 	Beverage beverage;
 
-	public Whip(Beverage beverage) {
+	public Soy(Beverage beverage) {
 		this.beverage = beverage;
 		this.setSize(Beverage.CupSize.TALL);
 	}
 
 	@Override
 	public String getDescription() {
-		return beverage.getDescription() + ", Whip";
+		return beverage.getDescription() + ", Soy";
 	}
 
 	@Override
@@ -21,11 +21,11 @@ public class Whip extends DecoratorCondiment {
 		double cost = beverage.cost();
 
 		if (getSize() == Beverage.CupSize.TALL) {
-			cost += 1.30;
+			cost += 0.80;
 		} else if (getSize() == Beverage.CupSize.GRANDE) {
-			cost += 2.15;
+			cost += .95;
 		} else if (getSize() == Beverage.CupSize.GRANDE) {
-			cost += 3.20;
+			cost += 1.20;
 		}
 
 		return cost;
