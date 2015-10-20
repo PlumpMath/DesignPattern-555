@@ -1,7 +1,7 @@
 package Decorator.demo1;
 
 /**
- *
+ * 装饰者模式
  */
 public abstract class Beverage {
 
