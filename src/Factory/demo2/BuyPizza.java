@@ -6,10 +6,10 @@ package Factory.demo2;
 public class BuyPizza {
 	public static void main(String[] args) {
 		PizzaStore nyPizzaStore = new NYStylePizzaStore();
-		nyPizzaStore.orderPizza("cheese");
+		nyPizzaStore.orderPizza(PizzaStore.Type.cheese);
 
 		PizzaStore chicagoPizzaStore = new ChicagoStylePizzaStore();
-		chicagoPizzaStore.orderPizza("clam");
+		chicagoPizzaStore.orderPizza(PizzaStore.Type.clam);
 
 	}
 }

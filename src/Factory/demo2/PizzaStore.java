@@ -5,7 +5,11 @@ package Factory.demo2;
  */
 public abstract class PizzaStore {
 
-	Pizza orderPizza(String type) {
+	public enum Type {
+		cheese, pepperoni, clam, veggie
+	}
+
+	Pizza orderPizza(Type type) {
 		Pizza pizza = createPizza(type);
 		pizza.prepare();
 		pizza.bake();
@@ -14,6 +18,6 @@ public abstract class PizzaStore {
 		return pizza;
 	}
 
-	protected abstract Pizza createPizza(String type);
+	protected abstract Pizza createPizza(Type type);
 
 }

@@ -2,17 +2,17 @@ package Factory.demo2;
 
 public class ChicagoStylePizzaStore extends PizzaStore {
 
-	public Pizza createPizza(String type) {
+	public Pizza createPizza(Type type) {
 
 		Pizza pizza = null;
 
-		if ("cheese".equals(type)) {
+		if (Type.cheese.equals(type)) {
 			pizza = new ChicagoStyleCheesePizza();
-		} else if ("pepperoni".equals(type)) {
+		} else if (Type.pepperoni.equals(type)) {
 			pizza = new ChicagoStylePepperoniPizza();
-		} else if ("clam".equals(type)) {
+		} else if (Type.clam.equals(type)) {
 			pizza = new ChicagoStyleClamPizza();
-		} else if ("veggie".equals(type)) {
+		} else if (Type.veggie.equals(type)) {
 			pizza = new ChicagoStyleVeggiePizza();
 		}
 		return pizza;
