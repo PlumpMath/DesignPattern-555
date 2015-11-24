@@ -1,4 +1,4 @@
-package Command.demo;
+package Command.demo1;
 
 /**
  * 命令模式-命令接口

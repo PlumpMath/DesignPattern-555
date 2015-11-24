@@ -1,4 +1,4 @@
-package Command.demo;
+package Command.demo1;
 
 /**
  * ≥µø‚√≈

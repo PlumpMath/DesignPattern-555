@@ -1,4 +1,4 @@
-package Command.demo;
+package Command.demo1;
 
 /**
  * ¼òµ¥µÄÔ¶³ÌÒ£¿ØÆ÷
@@ -8,13 +8,13 @@ public class SimpleRemoteControl {
 	Command[] offCommands;
 	Command undoCommand;
 
-	public SimpleRemoteControl() {
-		onCommands = new Command[7];
-		offCommands = new Command[7];
+	public SimpleRemoteControl(int size) {
+		onCommands = new Command[size];
+		offCommands = new Command[size];
 
 		Command noCommand = new NoCommand();
 
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < size; i++) {
 			onCommands[i] = noCommand;
 			offCommands[i] = noCommand;
 		}

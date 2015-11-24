@@ -1,7 +1,9 @@
 package Singleton.demo;
 
 /**
- * 这不是一个好的单件模式，在多线程中会出现问题。
+ * 单件模式
+ * 
+ * @双保险
  */
 public class DoubleCheckedLockingSingleton {
 
@@ -10,7 +12,7 @@ public class DoubleCheckedLockingSingleton {
 	private DoubleCheckedLockingSingleton() {
 	}
 
-	public static DoubleCheckedLockingSingleton getInstance() {
+	public static synchronized DoubleCheckedLockingSingleton getInstance() {
 		if (uniqueMyObject == null) {
 			synchronized (DoubleCheckedLockingSingleton.class) {
 				if (uniqueMyObject == null) {
