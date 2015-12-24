@@ -1,5 +1,8 @@
 package facade.demo1;
 
+/**
+ * 应用中，使用具体的类
+ */
 public class HomeTheaterTestDrive {
 
 	public static void main(String[] args) {

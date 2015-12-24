@@ -2,6 +2,8 @@ package facade.demo1;
 
 /**
  * 外观模式
+ * 
+ * @实际使用的是一组接口:这里使用类，是为了简化操作
  */
 public class HomeTheaterFacade {
 	Amplifier amp;
