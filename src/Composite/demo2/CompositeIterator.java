@@ -1,4 +1,4 @@
-package Composite.demo1;
+package Composite.demo2;
 
 import java.util.Iterator;
 import java.util.Stack;
@@ -47,6 +47,11 @@ public class CompositeIterator implements Iterator<MenuComponent> {
 	}
 
 	public void testCompositeIterator(MenuComponent component) {
-		CompositeIterator iterator = new CompositeIterator(component.iterator);
+		CompositeIterator iterator = new CompositeIterator(
+				component.createIterator());
+
+		while (iterator.hasNext()) {
+			component = iterator.next();
+		}
 	}
 }

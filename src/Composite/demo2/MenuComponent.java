@@ -1,4 +1,4 @@
-package Composite.demo1;
+package Composite.demo2;
 
 import java.util.Iterator;
 
@@ -36,4 +36,7 @@ public abstract class MenuComponent {
 		throw new UnsupportedOperationException();
 	}
 
+	public Iterator<MenuComponent> createIterator() {
+		throw new UnsupportedOperationException();
+	}
 }

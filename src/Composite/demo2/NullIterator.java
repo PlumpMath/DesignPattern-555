@@ -1,4 +1,4 @@
-package Composite.demo1;
+package Composite.demo2;
 
 import java.util.Iterator;
 

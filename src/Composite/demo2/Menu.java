@@ -1,4 +1,4 @@
-package Composite.demo1;
+package Composite.demo2;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,6 +43,10 @@ public class Menu extends MenuComponent {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public Iterator<MenuComponent> createIterator() {
+		return new CompositeIterator(menuComponents.iterator());
 	}
 
 	@Override

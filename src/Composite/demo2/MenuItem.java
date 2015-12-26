@@ -1,4 +1,4 @@
-package Composite.demo1;
+package Composite.demo2;
 
 import java.util.Iterator;
 
@@ -58,4 +58,7 @@ public class MenuItem extends MenuComponent {
 		System.out.println("    -- " + getDescription());
 	}
 
+	public Iterator<MenuComponent> createIterator() {
+		return new NullIterator();
+	}
 }

@@ -1,4 +1,4 @@
-package Composite.demo1;
+package Composite.demo2;
 
 public class MenuTestDrive {
 	public static void main(String[] args) {
@@ -29,6 +29,7 @@ public class MenuTestDrive {
 						true, 1.59));
 
 		Waitress waitress = new Waitress(allMenus);
-		waitress.printMenu();
+		waitress.printVegetarianMenu();
+
 	}
 }
