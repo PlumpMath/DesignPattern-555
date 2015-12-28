@@ -1,7 +1,5 @@
 package Composite.demo1;
 
-import java.util.Iterator;
-
 public abstract class MenuComponent {
 
 	public void add(MenuComponent menuComponent) {

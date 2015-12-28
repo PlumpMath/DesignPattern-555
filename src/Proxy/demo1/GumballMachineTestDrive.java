@@ -1,5 +1,8 @@
 package Proxy.demo1;
 
+/**
+ * ´ýÐÞ¸Ä
+ */
 public class GumballMachineTestDrive {
 	public static void main(String[] args) {
 		int count = 100;
